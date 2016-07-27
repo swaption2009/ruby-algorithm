@@ -3,10 +3,9 @@ class Node
 
   def initialize elt, next_node=nil
     @elt = elt
-    @next_node = next_node
+    @next = next_node
   end
 end
-
 
 # create List stores a reference to the first node (head)
 class List
@@ -17,11 +16,11 @@ class List
   end
 
   def remove node
-    if list == node
+    if head == node
       @head = head.next
     elsif node.next
       node.elt = node.next.elt
-      node.next_node = node.next.next_node
+      node.next = node.next.next
     else
       cur = head
       while cur.next != node
