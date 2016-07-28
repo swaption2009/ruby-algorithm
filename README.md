@@ -15,4 +15,10 @@ Usage (in IRB):
 - list.remove(node1)
 - list
 
-2.
+2. Reverse Linked List
+There are 3 ways to reverser linked list:
+- without using Ruby's parallel assignment
+- user a, b = b, a Ruby assignment
+- user recursive version
+
+See explanation [here](http://www.codeproject.com/Articles/27742/How-To-Reverse-a-Linked-List-3-Different-Ways).

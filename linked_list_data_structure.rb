@@ -29,4 +29,33 @@ class List
       cur.next = nil
     end
   end
+
+  # reverse linked list with 3 methods
+  # method 1
+  def reverse node
+    prev = nil
+    while node
+      tmp = node.next
+      node.next = prev
+      prev = node
+      node = tmp
+    end
+  end
+
+  # method 2: use Ruby assigment a,b = b,a
+  def reverse_1 node
+    prev = nil
+    while node
+      node.next, prev, node = prev, node, node.next
+    end
+    prev
+  end
+
+  # method 3: use recursive version
+  def reverse_rec node, prev=nil
+    return prev unless node
+    tmp = node.next
+    node.next = prev
+    reverse_rec tmp, node
+  end
 end
