@@ -40,6 +40,7 @@ class List
       prev = node
       node = tmp
     end
+    prev # not in book
   end
 
   # method 2: use Ruby assigment a,b = b,a
