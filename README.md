@@ -30,3 +30,17 @@ Usage (in IRB):
 - list.reverse(head_node)
 - list.reverse_1(head_node)
 - list.reverse_rec(head_node)
+
+
+3. List-based Queue Implementation
+
+A linked list can be used as an efficient First In, First Out (FIFO) queue. We remove elements from the beginning of the list and add them at the end. We store a pointer to the last node (tail) to make enqueue faster.
+
+See explanation [here](https://www.cs.bu.edu/teaching/c/queue/linked-list/types.html).
+
+Usage (in IRB):
+- q = ListQueue.new
+- q.enqueue(1)
+- q.enqueue(2)
+- q.dequeue
+
