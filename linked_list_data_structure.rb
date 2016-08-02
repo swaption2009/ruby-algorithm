@@ -1,3 +1,5 @@
+require 'pp'
+
 class Node
   attr_accessor :elt, :next
 
@@ -59,4 +61,26 @@ class List
     node.next = prev
     reverse_rec tmp, node
   end
+
+  # The Middle Node of a List
+  def find_middle(node)
+    fast = slow = node
+    while fast
+      fast = fast.next
+      if fast
+        fast = fast.next
+        slow = slow.next
+      end
+    end
+    pp(slow)
+    slow
+  end
 end
+
+list = List.new
+node1 = list.insert(1)
+node2 = list.insert(2)
+node3 = list.insert(3)
+node4 =list.insert(4)
+pp(list)
+list.find_middle(node4)
